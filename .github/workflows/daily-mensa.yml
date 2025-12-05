@@ -1,8 +1,9 @@
 name: Daily Mensa Script
 
 on:
-  schedule:
-    - cron: '0 4 * * *' # Refreh time
+    workflow_dispatch:      # <--- DIESE ZEILE ERMÖGLICHT DEN MANUELLEN START
+    schedule:
+    - cron: '0 4 * * *'   # Refresh time
 
 jobs:
   update-rates:
