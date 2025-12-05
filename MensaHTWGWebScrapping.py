@@ -53,8 +53,8 @@ def webScrappingUni():
 
     df_gerichte = df_gerichte[['Date','Kategorie','Titel','Preis','Preis_Studierende','Preis_Mitarbeiter','Preis_Gaste']]
 
-    df_gerichte.to_csv(r"C:\Users\nicol\Desktop\STUDIUM\Proyectos\Mensa-db-htwg\mensa.csv", index=False)
-    print("Succes csv was uploaded succesfully")
+    #df_gerichte.to_csv(r"mensa.csv", index=False)
+    #print("Succes csv was uploaded succesfully")
 
 
     load_dotenv()
@@ -71,6 +71,6 @@ def webScrappingUni():
 
 
     #Save to DB
-    df_gerichte.to_sql('table_mensa', con=engine, if_exists='replace', index = False)
+    df_gerichte.to_sql('table_mensa', con=engine, if_exists='append', index = False)
 
-    print("Succes in SQL Too!")
+    print("Succes sending the daba to SQL neon")
