@@ -1,4 +1,5 @@
-# Add your required packages here
-# Example:
-pandas
+beautifulsoup4
 requests
+pandas
+sqlalchemy
+python-dotenv
