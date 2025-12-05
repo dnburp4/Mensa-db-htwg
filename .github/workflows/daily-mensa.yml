@@ -1,7 +1,7 @@
 name: Daily Mensa Script
 
 on:
-    workflow_dispatch:      # <--- DIESE ZEILE ERMÖGLICHT DEN MANUELLEN START
+    workflow_dispatch:     
     schedule:
     - cron: '0 4 * * *'   # Refresh time
 
