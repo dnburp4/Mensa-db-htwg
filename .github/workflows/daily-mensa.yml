@@ -27,5 +27,5 @@ jobs:
           password: ${{ secrets.DB_PASSWORD }}
           host: ${{ secrets.DB_HOST }}
           port: ${{ secrets.DB_PORT }}
-          dbname: ${{ secrets.DB_NAME_MENSA }}
+          dbname: ${{ secrets.DB_NAME }}
         run: python Mensa_db_main.py
