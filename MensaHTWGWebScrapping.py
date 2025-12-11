@@ -73,4 +73,4 @@ def webScrappingUni():
     #Save to DB
     df_gerichte.to_sql('table_mensa', con=engine, if_exists='append', index = False)
 
-    print("Succes sending the daba to SQL neon")
+    print("Succes sending the dabase to SQL neon")
