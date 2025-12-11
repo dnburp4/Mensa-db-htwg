@@ -67,8 +67,7 @@ def webScrappingUni():
     database = os.getenv("database")
 
 
-    engine = create_engine(f'postgresql+psycopg2://{user}:{password}@{host}:{port}/{database}')
-
+    engine = create_engine(f'postgresql+psycopg2://{user}:{password}@{host}:{port}/{database}?sslmode=require&channel_binding=require')
 
     #Save to DB
     df_gerichte.to_sql('table_mensa', con=engine, if_exists='append', index = False)
