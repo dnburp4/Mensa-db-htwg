@@ -49,7 +49,9 @@ def webScrappingUni():
     df_gerichte.info()
 
 
-    df_gerichte["Date"] = datetime.datetime.now().strftime("%d.%m.%Y %H:%M:%S")
+    df_gerichte["Date"] = datetime.datetime.now().replace(microsecond=0)
+    
+    #Not using this anymore because it is converted as text strftime("%d.%m.%Y %H:%M:%S")
 
     df_gerichte = df_gerichte[['Date','Kategorie','Titel','Preis','Preis_Studierende','Preis_Mitarbeiter','Preis_Gaste']]
 
